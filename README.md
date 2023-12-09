@@ -2,8 +2,8 @@
 This is a small API that can be used as a micro-server to track and alert clients when they have left their home.
 
 * **Features** 
-  - The client sends requests with with a User ID, Latitude and Longitude.
-  - The program will push a notification to the user once they have gone greater than 200m from their home.
+  - The client sends requests with with a User ID, Latitude and Longitude
+  - The program will push a notification to the user once they have gone greater than 200m from their home
 
 ## Tech/framework used
 
