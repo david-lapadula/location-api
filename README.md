@@ -1,34 +1,45 @@
 ## Location API
-This is a small API that can be used as a micro-server to track and alert clients when they have left their home.
 
-* **Features** 
-  - The client sends requests with with a user id, latitude and longitude
-  - The program will push a notification to the user once they have gone greater than 200m from their home
+## Table of contents
+1. [Description](#description)
+2. [Technology](#technology)
+3. [Usage](#usage)
 
-## Tech/framework used
+## Description
+A microserver designed to store user geolocation data and send alerts when a user leaves their home. The client submits requests containing a user ID, latitude, and longitude. The server then monitors the user's location and sends a notification if the user moves more than 200 meters away from their home.
 
-<b>Built with</b>
+
+## Technology
+
+- [Express.js](https://expressjs.com/)
 - [Node.js](https://nodejs.org/en/)
 - [MongoDB](https://www.mongodb.com/)
 - [Mongoose ORM](https://mongoosejs.com/)
-- [Express Web Server](https://expressjs.com/)
-- Haversine used for distance calculations
-
-## Installation
-
-### If you want to test the API on your machine: 
-
-<b>First Install some necessary tools</b>
-- [Node.js](https://nodejs.org/en/)
-- [MongoDB](https://www.mongodb.com/)
 - [Postman](https://www.getpostman.com/)
 
-```
-1. Fork the repository and clone it into a folder on your computer. 
-2. Navgiate to the root directory and run 'npm install' in the terminal'.
-3. Navigate into the 'src' directory and run the command 'node index.js' in the termal; this point the server should be running.
-4. Create a user using your MongoDB client, set the latitude and longitude of their home location.
-5. Hit the route users/checklocation/:id/:latitude/:longitude. Test with different coordinates to see the functionality.
+## Usage
 
-```
+To run this on your local machine, first ensure that Node, Mongo, and Postman are installed. Links are available in the [Technology](#technology) section.
+
+1. Clone the repository to your local machine. 
+```bash
+git clone https://github.com/DavidLapadula/LocationAPI.git
+cd locationapi
+```  
+
+2. Open a terminal in the root directory and run:
+```bash
+npm install
+```  
+
+3. The `.env` file has default values for your MongoDB connection. Ensure they are correct and modify them as needed.
+
+4. Open a terminal in the 'src' directory and run:
+```bash
+node index.js
+``` 
+
+5. Using your MongoDB client, create a user and set the latitude and longitude of their home.
+
+6. Using Postman (or another REST client) you can ping the route `users/checklocation/:id/:latitude/:longitude`. Test with different latitude/longitude values to verify the functionality.
 
