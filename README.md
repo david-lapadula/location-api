@@ -23,8 +23,8 @@ To run this on your local machine, first ensure that Node, Mongo, and Postman ar
 
 1. Clone the repository to your local machine. 
 ```bash
-git clone https://github.com/DavidLapadula/LocationAPI.git
-cd locationapi
+git clone https://github.com/DavidLapadula/location-api.git
+cd location-api
 ```  
 
 2. Open a terminal in the root directory and run:
